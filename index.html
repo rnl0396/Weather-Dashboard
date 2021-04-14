@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <header id="jumbotron" class="jumbotron bg-dark text-light">
+      <h1 id="title" class="display-3">Weather Dashboard</h1>
+      
+    </header>
+    <div class="container">
+
+      <!-- Modules under header go here -->
+
+      <!-- City search bar -->
+        <div class = "row" id="container">
+            <!-- City search bar + header -->
+            <div class="col-md-4 h-100 p-5 bg-light border rounded-3" id="column1">
+                <h4 class = "col-md-12" id="searchHeader">Search for a city:</h4>
+                <!-- input -->
+                <form id="submitForm">
+                    <input id="searchBar" class = "" type="text" placeholder="Enter a city name"></input>
+                    <button class = "col-md-4 btn btn-outline-secondary" id="submitB">submit</button>
+                    <div class="alert alert-warning" role="alert" style="display:none" id="alertMessage">
+                      "Please enter the name of a city."
+                    </div>
+                </form>
+                <div id="searchHistory" style="display:none">
+                    <h4>Search History</h4>
+                    <ul class="list-group" id="listGroup">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- second column with weather info being output -->
+            <div id="column2" class="col-8" style="display:none">
+                <div class="col-md-8  h-auto w-auto p-5 bg-light border rounded-3" id="output">
+                    <h1 id="cityName">City Name</h1>
+                    <p id="currentTemp">Temperature:</p>
+                    <p id="currentHumid">Humidity:</p>
+                    <p id="currentWind">Wind-Speed:</p>
+                    <p id="currentUV">UV-Index:</p>
+                </div>
+                <h1 class= "" id="forecastHeader">5-Day Forecast:</h1>
+                
+                <div class="col" id="forecast">
+
+                  <span class= "col" id="box1">
+                    <h6 id="day1">Date 1</h6>
+                    <p id="image1"></p>
+                    <p id="temp1">temp 1</p>
+                    <p id="humid1">humidity 1</p>
+                  </span>
+
+                  <span class= "col" id="box2">
+                    <h6 id="day2">Date 2</h6>
+                    <p id="image2"></p>
+                    <p id="temp2">temp 2</p>
+                    <p id="humid2">humidity 2</p>
+                  </span>
+
+                  <span class= "col" id="box3">
+                    <h6 id="day3">Date 3</h6>
+                    <p id="image3"></p>
+                    <p id="temp3">temp 3</p>
+                    <p id="humid3">humidity 3</p>
+                  </span>
+
+                  <span class= "col" id="box4">
+                    <h6 id="day4">Date 4</h6>
+                    <p id="image4"></p>
+                    <p id="temp4">temp 4</p>
+                    <p id="humid4">humidity 4</p>
+                  </span>
+
+                  <span class= "col" id="box5">
+                    <h6 id="day5">Date 5</h6>
+                    <p id="image5"></p>
+                    <p id="temp5">temp 5</p>
+                    <p id="humid5">humidity 5</p>
+                  </span>
+
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
