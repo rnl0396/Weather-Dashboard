@@ -4,6 +4,7 @@ var cityList = document.querySelector("#listGroup");
 
 var cityNames = [];
 
+
 // The following function renders items in a city list as <li> elements
 function renderCities() {
     // Clear cityList element
@@ -65,6 +66,7 @@ document.getElementById("submitB").addEventListener("click",function(event){
         // document.getElementById("image1").clear();
         document.getElementById("cityName").innerText=cityName;
         document.getElementById("searchHistory").style.display="";
+        localStorage.getItem("cityNames");
 
         cityNames.push(cityName);
         
@@ -72,7 +74,11 @@ document.getElementById("submitB").addEventListener("click",function(event){
         init();
         storeCities();
 
-        document.getElementById("listGroup").innerText=cityName;
+        function cityStorageList() {
+            
+        }
+
+        document.getElementById("listGroup").innerText=localStorage.getItem("cityNames");;
 
 
         var requestUrl="http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&units=imperial&appid=eae885603ff663eaa33d893bb51bceb8";
